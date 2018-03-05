@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Graph: </title>
+    <script type="text/javascript" src="d3/d3.js"></script>
+	<script type="text/javascript" src="axis-zoom-grid.js"></script>
+		<style>
+		.axis path {
+		  display: none;
+		}
+		.axis line {
+		  stroke-opacity: 0.3;
+		  shape-rendering: crispEdges;
+		}
+		.view {
+		  fill: url(#gradient);
+		  stroke: #000;
+		}
+		button {
+		  position: absolute;
+		  cursor: pointer;
+		  background: rgba(150,150,150,0.6);
+  		  text-shadow: 1px 1px 1px white;
+		  top: 20px;
+		  left: 30px;
+		  border: 2px solid #999;
+    	  border-radius: 2;
+    	  padding-left: 10;
+    	  -webkit-appearance: none;
+		}
+		p {
+		margin : .5em 10 10;
+    	-webkit-appearance: none;
+  		}
+  		body {
+  			width:640px;
+
+  		}
+  		img {
+  			width:640px;
+  			height:480px;
+  		}
+  		#sv {
+  			position: relative;
+  			left: 0px;
+  			right: 0px;
+  			top: 0px;
+  			bottom: 0px;
+  		}
+  		.all-img {
+  		position: relative;
+  		display: block;
+  		width: 640px;
+  		height: 480px;
+		}
+		.overlay {
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 640px;
+  		height: 480px;
+  		background-color: rgba(0,0,0,0);
+		}
+		.low-bar img {
+  		display: block;
+  		width: 20%;
+  		float: left;
+  		cursor: pointer;
+		}
+		</style>
+	</head>	
+	
+	<body>
+	<button id="Reset">Reset</button><br>
+	<p>Press Button to Reset View</p>
+	<div class="all-img">
+		<img class="displayed-img" src="images/p1.jpg">	
+		<div class="overlay">
+			<div id="svgcontent">
+			<svg id="sv" width="960" height="720" style="border: 2px solid black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 960 720">
+			<a>
+			<polygon points="0, 0 960,0 960, 720 10,720" fill="url(#img)"	/>
+			</a>
+			</svg>	
+			</div>
+		</div>
+		<button id="toggle" class="dark">Darken</button>	
+	</div> 
+	<div>
+	<img class="low-bar" src="images/p2.jpg">
+	</div>	
+
+
+	
+</body>
+</html>
